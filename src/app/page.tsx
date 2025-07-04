@@ -44,7 +44,8 @@ export default function HomePage() {
           className="h-10"
           width={128}
           height={128}
-          quality={100} />
+          quality={100}
+        />
         <h1 className="text-4xl font-bold font-mono tracking-wide">
           関西夏ロボコン2025 スコアボード@デモ版
         </h1>

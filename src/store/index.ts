@@ -1,4 +1,5 @@
 import { create } from "zustand";
+
 import { TeamName, TeamColor } from "../app/constants";
 
 interface ScoreState {

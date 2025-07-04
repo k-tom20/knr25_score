@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+
 import { TeamName, DEFAULT_TEAM_NAMES } from "../constants";
 
 interface UseScoreReturn {
@@ -21,10 +22,10 @@ export const useScore = (): UseScoreReturn => {
   const [redScore, setRedScore] = useState(0);
   const [blueScore, setBlueScore] = useState(0);
   const [redTeamName, setRedTeamName] = useState<TeamName>(
-    DEFAULT_TEAM_NAMES.RED
+    DEFAULT_TEAM_NAMES.RED,
   );
   const [blueTeamName, setBlueTeamName] = useState<TeamName>(
-    DEFAULT_TEAM_NAMES.BLUE
+    DEFAULT_TEAM_NAMES.BLUE,
   );
   const [logs, setLogs] = useState<string[]>([]);
 

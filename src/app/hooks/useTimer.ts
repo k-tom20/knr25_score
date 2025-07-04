@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+
 import { MatchType, Phase, TIMER_CONFIG } from "../constants";
 
 interface UseTimerReturn {
@@ -35,7 +36,7 @@ export const useTimer = (): UseTimerReturn => {
     const seconds = sec % 60;
     return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
       2,
-      "0"
+      "0",
     )}`;
   }, []);
 
@@ -128,7 +129,7 @@ export const useTimer = (): UseTimerReturn => {
       setPhase("setup");
       setRunning(false);
     },
-    [freeTimeInput]
+    [freeTimeInput],
   );
 
   // タイマーを一時停止する関数
@@ -180,8 +181,6 @@ export const useTimer = (): UseTimerReturn => {
 
     return () => clearInterval(interval);
   }, [running, phase, matchType]);
-
-  
 
   return {
     time,

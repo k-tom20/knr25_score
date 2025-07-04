@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+
 import {
   TEAM_NAMES,
   SCORING_CONDITIONS,
@@ -31,32 +32,30 @@ export default function ControlPanel({
   const handleScoreChange = (
     code: string,
     point: number,
-    isPositive: boolean
+    isPositive: boolean,
   ) => {
     const delta = isPositive ? point : -point;
     onScoreChange(code, delta);
     onLog?.(
-      `${teamName} ${isPositive ? "+" : ""}${delta} 点: ${SCORING_CONDITIONS.find((item) => item.code === code)?.description}`
+      `${teamName} ${isPositive ? "+" : ""}${delta} 点: ${SCORING_CONDITIONS.find((item) => item.code === code)?.description}`,
     );
   };
-  const isTwoColumn = layout === "2xN";
-
   const manualConditions = SCORING_CONDITIONS.filter((item) =>
-    item.description.includes("手動")
+    item.description.includes("手動"),
   );
   const autoConditions = SCORING_CONDITIONS.filter((item) =>
-    item.description.includes("自動")
+    item.description.includes("自動"),
   );
   const otherConditions = SCORING_CONDITIONS.filter(
     (item) =>
-      !item.description.includes("手動") && !item.description.includes("自動")
+      !item.description.includes("手動") && !item.description.includes("自動"),
   );
 
   const firstColumn = [...manualConditions];
   const secondColumn = [...autoConditions];
 
   // 残りの項目を両方のカラムに均等に分配
-  otherConditions.forEach((item, index) => {
+  otherConditions.forEach((item) => {
     if (firstColumn.length <= secondColumn.length) {
       firstColumn.push(item);
     } else {
@@ -94,7 +93,9 @@ export default function ControlPanel({
                   className={`flex items-center justify-between border border-gray-300 rounded-full px-4 py-8 bg-white text-black shadow-sm`}
                 >
                   <button
-                    onClick={() => handleScoreChange(item.code, item.point, true)}
+                    onClick={() =>
+                      handleScoreChange(item.code, item.point, true)
+                    }
                     className="bg-green-500 text-white text-lg font-bold rounded-full w-10 h-10 hover:bg-green-600 transition-colors"
                   >
                     +
@@ -103,7 +104,9 @@ export default function ControlPanel({
                     {item.description}（{item.point}）
                   </span>
                   <button
-                    onClick={() => handleScoreChange(item.code, item.point, false)}
+                    onClick={() =>
+                      handleScoreChange(item.code, item.point, false)
+                    }
                     className="bg-gray-500 text-white text-lg font-bold rounded-full w-10 h-10 hover:bg-red-600 transition-colors"
                   >
                     -
@@ -118,7 +121,9 @@ export default function ControlPanel({
                   className={`flex items-center justify-between border border-gray-300 rounded-full px-4 py-8 bg-white text-black shadow-sm`}
                 >
                   <button
-                    onClick={() => handleScoreChange(item.code, item.point, true)}
+                    onClick={() =>
+                      handleScoreChange(item.code, item.point, true)
+                    }
                     className="bg-green-500 text-white text-lg font-bold rounded-full w-10 h-10 hover:bg-green-600 transition-colors"
                   >
                     +
@@ -127,7 +132,9 @@ export default function ControlPanel({
                     {item.description}（{item.point}）
                   </span>
                   <button
-                    onClick={() => handleScoreChange(item.code, item.point, false)}
+                    onClick={() =>
+                      handleScoreChange(item.code, item.point, false)
+                    }
                     className="bg-gray-500 text-white text-lg font-bold rounded-full w-10 h-10 hover:bg-red-600 transition-colors"
                   >
                     -

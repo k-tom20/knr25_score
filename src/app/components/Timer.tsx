@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { useTimer } from "../hooks/useTimer";
-import { MATCH_TYPES, TIMER_CONFIG } from "../constants";
+
 import { useSound } from "use-sound";
+
+import { MATCH_TYPES, TIMER_CONFIG } from "../constants";
+import { useTimer } from "../hooks/useTimer";
 
 interface TimerProps {
   onTick?: (display: string) => void; // タイマーの更新時に呼ばれるコールバック(オプション)

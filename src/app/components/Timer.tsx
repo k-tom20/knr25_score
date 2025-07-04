@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-
 import { useSound } from "use-sound";
 
 import { MATCH_TYPES, TIMER_CONFIG } from "../constants";

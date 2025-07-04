@@ -1,5 +1,4 @@
 "use client";
-
 import { TeamColor } from "../constants";
 
 interface ScoreProps {

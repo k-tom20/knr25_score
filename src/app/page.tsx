@@ -4,12 +4,10 @@ import Image from "next/image";
 import React, { useRef, useCallback } from "react";
 
 import "./globals.css";
-
 import ControlPanel from "./components/ControlPanel";
 import Log from "./components/Log";
 import Score from "./components/Score";
 import Timer from "./components/Timer";
-
 import { useScore } from "./hooks/useScore";
 
 export default function HomePage() {

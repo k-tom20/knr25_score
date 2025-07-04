@@ -5,6 +5,9 @@ const nextConfig = {
   basePath: '/knr25_score',
   assetPrefix: '/knr25_score/',
   trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

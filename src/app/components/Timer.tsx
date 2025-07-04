@@ -35,8 +35,8 @@ export default function Timer({ onTick }: TimerProps) {
     getPhaseColor,
   } = useTimer();
 
-  const [countPlay] = useSound("/count.mp3");
-  const [overPlay] = useSound("/over.mp3");
+  const [countPlay] = useSound("/knr25_score/public/count.mp3");
+  const [overPlay] = useSound("/knr25_score/public/over.mp3");
 
   const prevPhaseRef = useRef<string>("");
   const prevTimeRef = useRef<number>(-1);

@@ -39,7 +39,7 @@ export default function HomePage() {
     <main className="p-6 bg-white text-black min-h-screen flex flex-col items-center gap-6">
       <header className="w-full flex items-center justify-center gap-4 bg-sky-300/80 text-white py-4 px-6 rounded-xl shadow-md">
         <Image
-          src="/logo.png"
+          src="/knr25_score/public/logo.png"
           alt="logo"
           className="h-10"
           width={40}
